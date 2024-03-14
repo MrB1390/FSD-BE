@@ -11,7 +11,7 @@ const mail = (token) => {
 
   let details = {
     from: "balaworkcc@gmail.com",
-    to: "balasivam28@gmail.com",
+    to: "balaworkcc@gmail.com",
     subject: "Password-Reset",
     text: `Click the following link to reset your password: https://cosmic-nougat-7d04d1.netlify.app/reset-pass?token=${token}`,
   };
