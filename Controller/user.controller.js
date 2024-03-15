@@ -96,7 +96,7 @@ export const verifyEmail = async(req,res) => {
             })
         }
         const token = jwt.sign({_id:user._id},process.env.SECRET_KEY)
-        mail(token);
+        mail(token,email);
         res.status(200).json({
             message: "Mail sent",
             token: token
