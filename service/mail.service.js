@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-const mail = (token) => {
+const mail = (token,email) => {
   let mailTransporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
