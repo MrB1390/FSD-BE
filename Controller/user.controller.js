@@ -95,7 +95,7 @@ export const verifyEmail = async(req,res) => {
                 message:"User not Found"
             })
         }
-        const token = jwt.sign({_id:user._id},process.env.SECRET_KEY)
+        const token = jwt.sign({_id:user._id},process.env.SECRET_KEY,{expiresIn: '1h'})
         mail(token,email);
         res.status(200).json({
             message: "Mail sent",
